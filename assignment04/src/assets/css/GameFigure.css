@@ -1,0 +1,83 @@
+.gameFigure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+}
+
+th {
+    border-color: brown;
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+td {
+    border-color: brown;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+}
+
+.imageGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+.gridItem {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    transition: transform 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.gridItem:hover {
+    transform: scale(1.1);
+    border-color: orange;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loading {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+    color: #555;
+}
+
+/* Styling for the result column */
+td:first-child {
+    font-weight: bold;
+    color: #ff4500; /* Red for "Lose" */
+}
+
+td:first-child:contains('Win!') {
+    color: #32cd32; /* Green for "Win" */
+}
+
+/* Styling for animal name */
+td:nth-child(2) {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+}
